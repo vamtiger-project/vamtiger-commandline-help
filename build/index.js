@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const build_1 = require("vamtiger-get-string-table/build");
+const vamtiger_get_string_table_1 = require("vamtiger-get-string-table");
 exports.default = ({ args, short, description }) => {
     const header = [
         Header.argument,
@@ -27,7 +27,7 @@ exports.default = ({ args, short, description }) => {
         ];
         body.push(row);
     });
-    help = build_1.default({
+    help = vamtiger_get_string_table_1.default({
         header,
         body
     });
