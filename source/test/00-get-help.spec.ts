@@ -23,4 +23,4 @@ describe('vamtiger-help: should return', function () {
     it('help text', function () {
         expect(help).to.be.ok;
     })
-})
+});
