@@ -1,4 +1,4 @@
-import getStringTable from 'vamtiger-get-string-table/build';
+import getStringTable from 'vamtiger-get-string-table';
 
 export default ({ args, short, description }: IParams) => {
     const header = [
