@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const vamtiger_get_string_table_1 = require("vamtiger-get-string-table");
+const lodash_1 = require("lodash");
 exports.default = (params) => {
     const header = Object.keys(params);
     const rowKeys = Object.keys(params[header[0]]);
@@ -16,27 +17,8 @@ exports.default = (params) => {
         }
         body.push(row);
     }
-    // const keys = Object
-    //     .keys(args)
-    //     .sort();
-    // let arg;
-    // let shortArg;
-    // let argDescription;
-    // let row;
-    // let help;
-    // keys.forEach(key => {
-    //     arg = args[key];
-    //     shortArg = short[key] || '';
-    //     argDescription = description[key] || '';
-    //     row = [
-    //         arg,
-    //         shortArg,
-    //         argDescription
-    //     ];
-    //     body.push(row);
-    // })
     help = vamtiger_get_string_table_1.default({
-        header,
+        header: header.map(lodash_1.startCase),
         body
     });
     return help;
