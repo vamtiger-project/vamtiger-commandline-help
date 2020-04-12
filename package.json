@@ -1,6 +1,6 @@
 {
   "name": "vamtiger-commandline-help",
-  "version": "0.0.7-0",
+  "version": "0.0.7",
   "description": "Get commandline help text.",
   "main": "build",
   "types": "build/index.d.ts",
