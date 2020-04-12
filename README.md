@@ -34,6 +34,13 @@ const description = {
     argument: 'Argument description',
     anotherArgument: 'Another argument description'
 };
+/*
+Args can be named as desired.
+They just need to have the same key name mappings.
+
+In this instances the column names will be
+Args | Short | Description
+*/
 const help = getHelp({
     args,
     short,
@@ -43,7 +50,7 @@ const help = getHelp({
 console.log(help);
 /*
 ===================================================
-| Argument | Short | Description                  |
+| Args | Short | Description                  |
 ===================================================
 | Argument | a     | Argument description         |
 ---------------------------------------------------
