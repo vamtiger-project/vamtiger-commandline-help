@@ -1,4 +1,4 @@
-declare const _default: ({ args, short, description }: IParams) => string;
+declare const _default: (params: IParams) => string;
 export default _default;
 export declare enum Header {
     argument = "Argument",
@@ -6,9 +6,7 @@ export declare enum Header {
     description = "Description"
 }
 export interface IParams {
-    args: IArgs;
-    short: IArgs;
-    description: IArgs;
+    [key: string]: IArgs;
 }
 export interface IArgs {
     [key: string]: string;

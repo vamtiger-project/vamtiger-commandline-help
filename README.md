@@ -4,7 +4,7 @@ Get help text.
 ## Installation
 [VAMTIGER Commandline Help](https://github.com/vamtiger-project/vamtiger-commandline-help) can be installed using [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/en/):
 ```bash
-npm i --save vamtiger-commandline-help
+npm i vamtiger-commandline-help
 ```
 or
 ```bash
