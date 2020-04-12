@@ -1,13 +1,13 @@
 {
   "name": "vamtiger-commandline-help",
-  "version": "0.0.5",
+  "version": "0.0.6-0",
   "description": "Get commandline help text.",
   "main": "build",
   "types": "build/index.d.ts",
   "scripts": {
     "test": "mocha build/test --recursive",
     "build": "tsc",
-    "commit": "vamtigerNodeTypescriptCommit --push --publish",
+    "commit": "rm -rf build/test && vamtigerNodeTypescriptCommit --push --publish",
     "watch": "npm run build -- --watch"
   },
   "repository": {
