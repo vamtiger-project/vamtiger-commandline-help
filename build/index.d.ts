@@ -1,4 +1,4 @@
-declare const _default: (params: IParams) => string;
+declare const _default: (params: IParams, opts?: IOptions | undefined) => string;
 export default _default;
 export declare enum Header {
     argument = "Argument",
@@ -8,6 +8,12 @@ export declare enum Header {
 export interface IParams {
     [key: string]: IArgs;
 }
+export interface IOptions {
+    options: string[];
+}
 export interface IArgs {
     [key: string]: string;
+}
+export declare enum StringConstant {
+    doubleDash = "--"
 }
