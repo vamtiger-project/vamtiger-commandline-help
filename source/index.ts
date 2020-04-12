@@ -1,4 +1,5 @@
 import getStringTable from 'vamtiger-get-string-table';
+import { startCase } from 'lodash';
 
 export default (params: IParams) => {
     const header = Object.keys(params);
@@ -21,31 +22,8 @@ export default (params: IParams) => {
         body.push(row);
     }
 
-    // const keys = Object
-    //     .keys(args)
-    //     .sort();
-
-    // let arg;
-    // let shortArg;
-    // let argDescription;
-    // let row;
-    // let help;
-
-    // keys.forEach(key => {
-    //     arg = args[key];
-    //     shortArg = short[key] || '';
-    //     argDescription = description[key] || '';
-    //     row = [
-    //         arg,
-    //         shortArg,
-    //         argDescription
-    //     ];
-
-    //     body.push(row);
-    // })
-
     help = getStringTable({
-        header,
+        header: header.map(startCase),
         body
     });
 
