@@ -1,9 +1,9 @@
 import getStringTable from 'vamtiger-get-string-table';
 import { startCase } from 'lodash';
 
-export default (params: IParams) => {
+export default (params: IParams, opts?: IOptions) => {
     const header = Object.keys(params);
-    const rowKeys = Object.keys(params[header[0]]);
+    const rowKeys = Object.keys(params[header[0]]).sort();
     const body:string[][] = [];
 
     let row: string[];
@@ -15,6 +15,10 @@ export default (params: IParams) => {
 
         for (let headerKey of header) {
             rowColumn = params[headerKey][rowKey];
+
+            if (opts && opts.options && opts.options.includes(headerKey)) {
+                rowColumn = `${StringConstant.doubleDash}${rowColumn}`;
+            }
 
             row.push(rowColumn);
         }
@@ -40,6 +44,14 @@ export interface IParams {
     [key: string]: IArgs;
 }
 
+export interface IOptions {
+    options: string[]
+}
+
 export interface IArgs {
     [key: string]: string;
+}
+
+export enum StringConstant {
+    doubleDash = '--'
 }
